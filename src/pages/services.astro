@@ -1,0 +1,43 @@
+---
+import Layout from "../components/layout.astro";
+import Card from "../components/card.astro";
+
+const services = [
+  {
+    title: "Motivational",
+    description: "Motivational description",
+  },
+  {
+    title: "Family Friendly",
+    description: "Family Friendly description",
+  },
+  {
+    title: "Secure",
+    description: "Secure description",
+  },
+  {
+    title: "Easy to learn",
+    description: "Easy to learn description",
+  },
+  {
+    title: "100% Guarranted",
+    description: " 100% Guarranted description",
+  },
+  {
+    title: "Exclusive Partners",
+    description: "Exclusive Partners description",
+  },
+];
+---
+
+<Layout pageTitle="Services" pageDescription="Services description">
+  <div>
+    {
+      services.map((service) => {
+        return <Card {...service} />;
+      })
+    }
+  </div>
+</Layout>
+
+<style></style>

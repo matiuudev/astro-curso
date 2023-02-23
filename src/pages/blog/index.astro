@@ -1,0 +1,25 @@
+---
+import Layout from "../../components/layout.astro";
+const posts = await Astro.glob("./posts/*.md");
+---
+
+<Layout pageTitle="Blogs" pageDescription="Blogs description">
+  <h1>Blogs</h1>
+  {
+    posts.length ? (
+      posts.map((post) => {
+        return (
+          <>
+            <a href={post.url}>
+              {post.frontmatter.title} - {post.frontmatter.author}
+            </a>
+            <br />
+          </>
+        );
+      })
+    ) : (
+      <h5>No hay posts</h5>
+    )
+  }
+</Layout>
+<style></style>
