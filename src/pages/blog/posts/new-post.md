@@ -1,5 +1,5 @@
 ---
-layout: '../../components/layout.astro'
+layout: '../../../components/layout.astro'
 title: New Post
 author: Mateo Acevedo Vargas
 ---
